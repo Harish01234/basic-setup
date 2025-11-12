@@ -20,8 +20,5 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - /home/ubuntu/mongo_data:/data/db  # ✅ persistent host path
     restart: always
-
-volumes:
-  mongo_data:
